@@ -1,0 +1,40 @@
+{
+	"name": "HappyBirthday",
+	"short_name": "HappyBirthday",
+	"start_url": ".",
+	"display": "fullscreen",
+	"background_color": "#fff",
+	"description": "Be strong, be happy",
+	"icons": [
+		{
+			"src": "images/myo48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"src": "images/myo72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "images/myo96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "images/myo144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "images/myo168.png",
+			"sizes": "168x168",
+			"type": "image/png"
+		},
+		{
+			"src": "images/myo192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	]
+}
