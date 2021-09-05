@@ -13,7 +13,7 @@ img.onclick = () => {
         interval = setInterval(() => {
             angle++;
             document.documentElement.style.setProperty('--angle', angle);
-        }, 10);
+        }, 30);
         audioPlaying = true;
     }
 }
