@@ -17,10 +17,16 @@
     align-items: center;
 }
 
+/* .img-container {
+    border: 10px solid red;
+} */
+
 img {
-    height: 40%;
+    max-height: 40%;
+    max-width: 100%;
     border-radius: 50%;
     border: 5px solid rgba(200, 200, 200, 0.5);
     cursor: pointer;
     transform: rotate(calc(var(--angle) * 1deg));
+    margin: 20px;
 }
