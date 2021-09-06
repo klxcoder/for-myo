@@ -17,3 +17,14 @@ img.onclick = () => {
         audioPlaying = true;
     }
 }
+
+// Make sure sw are supported
+if('serviceWorker' in navigator) {
+    console.log('sw is supported');
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            .register('./sw.js')
+            .then(reg => console.log('sw is registered'))
+            .catch(err => console.log(`sw error with error: ${err}`));
+    })
+}
