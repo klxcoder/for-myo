@@ -26,12 +26,15 @@ self.addEventListener('activate', (event) => {
 // Call Fetch Event
 self.addEventListener('fetch', (event) => {
     console.log('sw is fetching');
+    // Offline first
     event.responseWith(
-        fetch(event.request)
+        caches.match(event.request)
+        .then(res => res)
+        .catch(() => fetch(event.request)
             .then(res => {
                 // Make copy/clone of response
                 const resClone = res.clone();
-                // Open cache 
+                // Open cache
                 caches
                     .open(cacheName)
                     .then(cache => {
@@ -40,6 +43,6 @@ self.addEventListener('fetch', (event) => {
                     });
                 return res;
             })
-            .catch(() => caches.match(event.request).then(res => res))
+        ),
     )
 });
